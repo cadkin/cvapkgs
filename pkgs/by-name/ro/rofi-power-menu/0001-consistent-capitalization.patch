@@ -1,0 +1,31 @@
+diff --git a/rofi-power-menu b/rofi-power-menu
+index 13e17e3..be0b564 100755
+--- a/rofi-power-menu
++++ b/rofi-power-menu
+@@ -204,7 +204,7 @@ declare -A messages
+ declare -A confirmationMessages
+ for entry in "${all[@]}"
+ do
+-    messages[$entry]=$(write_message "${icons[$entry]}" "${texts[$entry]^}")
++    messages[$entry]=$(write_message "${icons[$entry]}" "${texts[$entry]}")
+ done
+ for entry in "${all[@]}"
+ do
+@@ -231,7 +231,7 @@ echo -e "\0markup-rows\x1ftrue"
+ 
+ if [ -z "${selection+x}" ]
+ then
+-    echo -e "\0prompt\x1fPower menu"
++    echo -e "\0prompt\x1fpower menu"
+     for entry in "${show[@]}"
+     do
+         echo -e "${messages[$entry]}\0icon\x1f${icons[$entry]}"
+@@ -247,7 +247,7 @@ else
+                 if [ "$entry" = "$confirmation" ]
+                 then
+                     # Ask for confirmation
+-                    echo -e "\0prompt\x1fAre you sure"
++                    echo -e "\0prompt\x1fare you sure?"
+                     echo -e "${confirmationMessages[$entry]}\0icon\x1f${icons[$entry]}"
+                     echo -e "${confirmationMessages[cancel]}\0icon\x1f${icons[cancel]}"
+                     exit 0

@@ -1,0 +1,13 @@
+diff --git a/pcmanfm/main-win.ui b/pcmanfm/main-win.ui
+index bd06e44..c73b119 100644
+--- a/pcmanfm/main-win.ui
++++ b/pcmanfm/main-win.ui
+@@ -742,7 +742,7 @@
+     <string>Open &amp;Terminal</string>
+    </property>
+    <property name="shortcut">
+-    <string>F4</string>
++    <string>F12</string>
+    </property>
+   </action>
+   <action name="actionOpenAsRoot">
